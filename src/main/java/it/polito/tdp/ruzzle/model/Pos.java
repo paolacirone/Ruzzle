@@ -2,6 +2,7 @@ package it.polito.tdp.ruzzle.model;
 
 /**
  * Classe che indentifica la posizione di una casella del gioco
+ * Ogni istanza della classe posizione è identificata da indice di riga e di colonna
  * 
  */
 public class Pos {

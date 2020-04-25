@@ -10,14 +10,19 @@ import javafx.beans.property.StringProperty;
 
 /**
  * Memorizza le lettere presenti nella scacchiera Ruzzle.
+ * è la classe che memorizza la matrice di gioco
  * @author Fulvio
  *
  */
 public class Board {
-	private List<Pos> positions;
-	private Map<Pos, StringProperty> cells;
+	private List<Pos> positions; //contiene la lista di posizioni della matrice 
+	private Map<Pos, StringProperty> cells; //Mappa di celle, utilizziamo delle StringProperty
+	//utilizzando le Stryng property possiamo far si che il bottone sia legato alla string property
+	//il cambiamento fa riferimento all'interfaccia grafica
+	//ogni volta che cambia la stringa, tramite il binding anche il testo del bottone cambierà 
+	//l'unica differenza con la stringa normale è he si usano i get
 
-	private int size;
+	private int size; //nel nostro caso 4, grandezza della matrice 
 
 	/**
 	 * Crea una nuova scacchiera della dimensione specificata
@@ -70,7 +75,7 @@ public class Board {
 		for(Pos p: this.positions) {
 			int random = (int)(Math.random()*26) ;
 			String letter = Character.toString((char)('A'+random)) ;
-			this.cells.get(p).set(letter); 
+			this.cells.get(p).set(letter); //questo set si riflette sul bottone
 		}
 	}
 	

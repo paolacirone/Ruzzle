@@ -1,0 +1,48 @@
+ 
+ Due modi di risolvere il problema: 
+ 
+   APRROCCIO 1
+   Il passo ricorsiovo è capire se una parola è presente o no nella griglia e applico questo processo a tutte 
+   le parole del dizionario.
+   
+   Problema: 
+    Dati input: Stringa da riconoscere 
+    Contenuto della Board(matrice) 
+    Mi assicuro che esista almeno la prima lettera nella matrice per avviare la ricorsione --> posizione lettera iniziale
+    
+    Soluzione parziale:
+        parte iniziale della parola già riconosciuta 
+        elenco delle posizioni in cui si trovano le lettere già riconosciute
+        
+    Soluzione totale: 
+        parola completamente riconosciuta 
+        elenco di posizioni che servono per comporre la parola completa
+        
+    Livello: 
+        Numero di caratteri già riconosciuti 
+     
+    Condizione terminale: 
+        livello= lunghezza parola (condizione di terminazione) 
+        se viene trovata la soluzione si interrompe subito la ricerca
+    
+    Generazione delle soluzioni: 
+        Trovare tutte le soluzioni che siano: 
+        adiacenti al'ultima posizione usata
+        conteneti la lettera corretta 
+        non ncora utiizzate
+        
+    Avvio della ricorsione:
+        Livello =1; //parto con la soluzione parziale già riempita dal carattere della parola da utilizzare
+        
+    Strutture dati: 
+        Stringa per memorizzare la parola 
+        Livello 
+        Elenco di posizioni del percorso corretto che staimo esplorando 
+        -List<Pos> 'percorso' carrispondente alla sequenza di caselle
+        
+    
+   
+   
+   
+   APPROCCIO 2 
+   Provare tutti i possibili percorsi sulla griglia di Ruzzle. 
